@@ -5,23 +5,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        fibonacci(10);
-    }
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
 
-    public static void fibonacci(int n) {
-        int num1 = 1;
-        int num2 = 0;
-        int sum = 0;
-
-
-        for (int i = 1; i <= n; i++) {
-            System.out.print(sum + " ");
-
-            sum = num1 + num2;
-            num1 = num2 ;
-            num2 = sum;
-
-
-        }
+       for (int i = 0; i < n; i++) {
+           for (int j = 0; j <= 2 * i - 1; j++) {
+               System.out.print(" ");
+           }
+           for (int j = n; j > i; j--) {
+               System.out.print(i%n);
+           }
+           System.out.println();
+       }
     }
 }
